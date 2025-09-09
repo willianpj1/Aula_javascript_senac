@@ -1,0 +1,1 @@
+const igualButton = document.getElementById('igual')

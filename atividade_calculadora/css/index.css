@@ -1,0 +1,117 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Layout geral ===== */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* ===== Container da calculadora ===== */
+.calculadora {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    width: 340px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Título ===== */
+.calculadora h1 {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+/* ===== Campos de entrada ===== */
+.calculadora label {
+    display: block;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.2rem;
+}
+
+.calculadora input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #3a3a3a;
+    color: #fff;
+    text-align: right;
+}
+
+.calculadora input:focus {
+    outline: 2px solid #0078d7;
+}
+
+/* ===== Botões ===== */
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #3a3a3a;
+    color: #fff;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #505050;
+}
+
+/* Botões de operações (+, -, x, ÷, %) */
+button.operador {
+    background: #2e7dff;
+}
+
+button.operador:hover {
+    background: #1a5dcc;
+}
+
+/* Botão limpar */
+button.limpar {
+    background: #e74c3c;
+}
+
+button.limpar:hover {
+    background: #c0392b;
+}
+
+/* ===== Resultado ===== */
+.resultado {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background: #1e1e1e;
+    border-radius: 6px;
+    min-height: 2.5rem;
+    color: #00ff99;
+}

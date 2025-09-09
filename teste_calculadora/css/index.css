@@ -1,0 +1,120 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Layout geral ===== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* ===== Container ===== */
+.calculadora {
+  background: #2d2d2d;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  width: 320px;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Visor ===== */
+.resultado {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: bold;
+  background: #1e1e1e;
+  border-radius: 6px;
+  min-height: 3rem;
+  color: #00ff99;
+  overflow-x: auto;
+}
+
+/* ===== Teclado ===== */
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #3a3a3a;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #505050;
+}
+
+/* Botões especiais */
+button.operador {
+  background: #2e7dff;
+}
+
+button.operador:hover {
+  background: #1a5dcc;
+}
+
+button.limpar {
+  background: #e74c3c;
+}
+
+button.limpar:hover {
+  background: #c0392b;
+}
+
+/* Botão zero ocupa 2 colunas */
+button.zero {
+  grid-column: span 2;
+}
+
+/* Botão apagar */
+button.apagar {
+  background: #ff9800;
+}
+
+button.apagar:hover {
+  background: #e68900;
+}
+
+/* ===== Explosão de emojis ===== */
+.emoji-explode {
+  position: fixed;
+  font-size: 1.5rem;
+  pointer-events: none;
+  animation: subirEmoji 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes subirEmoji {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) scale(1.2) rotate(20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.8) rotate(-20deg);
+  }
+}
