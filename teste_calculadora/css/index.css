@@ -1,66 +1,67 @@
 /* ===== Reset ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; /*Evita espaçamentos inesperados*/
+  padding: 0; /*Remove preenchimentos padrão*/
+  box-sizing: border-box; /*Facilita cálculo de tamanhos*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /*Isso define fonte padrão para a página, a lista serve para: caso a primeira não existe ele usará a segunda*/
 }
 
 /* ===== Layout geral ===== */
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #1e1e1e;
-  color: #fff;
+  justify-content: center; /*Centraliza horizontalmente o conteúdo*/
+  align-items: center; /*Centraliza verticalmente*/
+  min-height: 100vh; /*Serve para deixar a calculadora centralizada mesmo em telas altas*/
+  background: #1e1e1e; /*Cor de fundo*/
+  color: #fff; /*Define a cor do texto*/
 }
 
 /* ===== Container ===== */
 .calculadora {
-  background: #2d2d2d;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
-  width: 320px;
-  max-width: 95%;
-  display: flex;
-  flex-direction: column;
+  background: #2d2d2d; /*Cor do fundo*/
+  padding: 1rem; /*Espaço interno*/
+  border-radius: 12px; /*Serve para deixar as bordas redondas*/
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6); /*Define a sombra*/
+  width: 320px; /*Largura fixa padrão*/
+  max-width: 95%; /*Em telas pequenas evita que ultrapasse a largura da tela*/
+  display: flex; /*Organiza o conteúdo verticalmente(visor em cima e os botões em baixo*/
+  flex-direction: column; /*Organiza o conteúdo verticalmente(visor em cima e botões em baixo*/
 }
 
 /* ===== Visor ===== */
 .resultado {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  text-align: right;
-  font-size: 2rem;
-  font-weight: bold;
-  background: #1e1e1e;
-  border-radius: 6px;
-  min-height: 3rem;
-  color: #00ff99;
-  overflow-x: auto;
+  margin-bottom: 1rem; /*Define a distância entre o visor e os botões*/
+  padding: 1rem; /*Espaço interno*/
+  text-align: right; /*Alinha os números a direita(comum na calculadora)*/
+  font-size: 2rem; /*Texto para destacar o número exibido*/
+  font-weight: bold; /*Deixa o número em Negrito*/
+  background: #1e1e1e; /*Defina a cor do fundo*/
+  border-radius: 6px; /*Deixar as bordas redondas*/
+  min-height: 3rem; /*Garante altura mínima mesmo sem conteúdo*/
+  color: #00ff99; /*Cor do texto*/
+  overflow-x: auto; /*Se o número ficar muito grande o usuário poderá deslizar horizontalmente */
 }
 
 /* ===== Teclado ===== */
 .botoes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
+  display: grid; /*Usa CSS Grid para layout em linhas/colunas*/
+  grid-template-columns: repeat(4, 1fr); /*Cria  colunas com a largura igual*/
+  gap: 0.6rem; /*Espaçamento entre linhas e colunas*/
 }
 
 button {
-  padding: 1rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  background: #3a3a3a;
-  color: #fff;
-  transition: background 0.2s ease;
+  padding: 1rem; /*Tamanho do botão*/
+  border: none; /*Remove borda padrão*/
+  border-radius: 6px; /*Deixa as bordas redondas*/
+  font-size: 1.2rem; /*Tamanho do texto do botão*/
+  font-weight: bold; /*Negrito*/
+  cursor: pointer; /*Muda o cursor para indicar clique*/
+  background: #3a3a3a; /*Cor de fundo*/
+  color: #fff; /*Cor do texto*/
+  transition: background 0.2s ease; /*Suaviza a mudança de cor quando algo acontece*/
 }
 
+/*ISSO SERVE PARA DEFINIR CORES DIFERENTES PARA OS BOTÕES QUANDO ELES FOR SELECIONADOS, PARA CONSEGUIR IDENTIFICAR MELHOR O BOTÃO SELECIONADO*/
 button:hover {
   background: #505050;
 }
